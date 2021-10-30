@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+body {
+    animation-name: backgroundBreath;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes backgroundBreath {
+    0% {
+        background-color: rgb(247, 193, 94);
+    }
+
+    50% {
+        background-color: rgb(206, 149, 43);
+    }
+
+    100% {
+        background-color: rgb(247, 193, 94);
+    }
+}
+
+h1, h2, h3 {
+    font-family: sans-serif;
+}
+
+.main-title {
+    margin: 20px;
+    color: white;
+}
+
+#add {
+    cursor: pointer;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    grid-gap: 10px;
+}
+
+.book-card {
+    color: white;
+    background: linear-gradient(90deg, #ff7519 , #FEA82F);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgb(68, 68, 68);
+}
+
+.book-card div {
+    display: flex;
+    justify-content: center;
+}
+
+.book-card .read {
+    background-color: rgb(144, 230, 148);
+}
+
+.book-card .read.false {
+    background-color: rgb(148, 104, 104);
+}
+
+.book-card button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px 10px;
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: bold;
+    color: #FEA82F;
+    transition: color .3s ease-in;
+    cursor: pointer;
+}
+
+.book-card button:hover {
+    color: #FF6701;
+}
+
+.form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.137), rgba(0, 0, 0, 0.473));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.form.active {
+    display: flex;
+}
+
+.form form {
+    background: white;
+    border: 2px solid #FF6701;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.form form .icon {
+    color: #FEA82F;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform: translate(40%, -40%);
+    cursor: pointer;
+}
+
+.form form div {
+    margin-bottom: 10px;
+}
+
+.form button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px 10px;
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: bold;
+    color: #FEA82F;
+    transition: color .3s ease-in, background-color .3s ease-in;
+    cursor: pointer;
+    border: 1px solid #FF6701;
+}
+
+.form button:hover {
+    color: #FF6701;
+    background-color: white;
+}
